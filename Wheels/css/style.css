@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #dd0707;
+    --text-color: #fff;
+    --background-gradient: linear-gradient(90deg, #000000, #888888, #000000);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: black;
+}
+
+header nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+header nav .logo {
+    width: 150px;
+    margin-left: 65px;
+}
+
+header nav .links {
+    display: flex;
+    align-items: center;
+    padding-right: 25%;
+}
+
+nav .links a {
+    color: white;
+    margin-left: 30px;
+    position: relative;
+}
+
+nav .links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: 0.4s;
+}
+
+nav .links a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url(../imgs/bg.jpg) center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+}
+
+.hero .text {
+    width: 90%;
+}
+
+.hero .text h4 {
+    font-size: 40px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.hero .text h1 {
+    color: var(--text-color);
+    font-size: 65px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.hero .text h1 span {
+    color: var(--primary-color);
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.hero .text p {
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.hero .text .btn {
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    transition: 0.3s;
+}
+
+.hero .text .btn:hover {
+    background-color: transparent;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+
+}
+
+
+/* ... Your existing styles ... */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .links {
+        display: none;
+        width: 100%;
+        background-color: black;
+        padding: 10px;
+    }
+
+    .links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .links li {
+        margin: 10px 0;
+    }
+
+    .links a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+section {
+    background-image: var(--background-gradient);
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+}
+
+.about .container h1,
+.about span,
+h3,
+h2 {
+    color: var(--primary-color);
+    margin: 15px 10px;
+}
+
+p {
+    color: var(--text-color);
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.features .container h4 {
+    color: var(--primary-color);
+    padding: 50px;
+    margin-top: 0;
+}
+
+.features img {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.slider-container {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 800px;
+    height: 450px;
+    position: relative;
+}
+
+.slider-container img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+    width: 800px;
+    height: 450px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    /* Add a border radius to make the corners rounded */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    /* Set a light blur effect */
+
+
+}
+
+.slider-container img.active {
+    opacity: 1;
+}
+
+.slider-container .slide-number {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, .6);
+    color: #FFF;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.slider-controls {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-controls .prev,
+.slider-controls .next {
+    background-color: #dd0707;
+    color: #FFF;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+    user-select: none;
+    width: 20%;
+}
+
+.slider-controls .prev {
+    float: left;
+}
+
+.slider-controls .next {
+    float: right;
+}
+
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled {
+    background-color: rgba(255, 0, 0, 0.5);
+    cursor: no-drop;
+}
+
+.slider-controls .indicators {
+    width: 60%;
+    float: left;
+}
+
+.slider-controls .indicators ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.slider-controls .indicators ul li {
+    display: inline-block;
+    background-color: #F6F6F6;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.slider-controls .indicators ul li.active {
+    background-color: #161b1b;
+    color: #FFF;
+}
+
+.variations {
+    padding-bottom: 10px;
+}
+
+.variations .content {
+    width: 90%;
+    margin: auto;
+}
+
+.variations .content p {
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.specials {
+    position: relative;
+    padding-bottom: 50px;
+
+}
+
+.specials p {
+    width: 65%;
+}
+
+.square,
+.specials img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.square {
+    right: 30px;
+    width: 70px;
+    height: 400px;
+    background-color: var(--primary-color);
+}
+
+.specials img {
+    right: 50px;
+    width: 200px;
+    height: auto;
+    width: 400px;
+    height: 300px;
+}
+
+/* contact section styling */
+.contact {
+    background-image: url(../imgs/form.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.contact span {
+    color: var(--primary-color);
+    margin: 10px;
+}
+
+/* Styles for the window container */
+
+.window {
+    width: 50%;
+    height: 70vh;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); */
+}
+
+form{
+    height: 100%;
+    width: 70%;
+    margin: auto;
+}
+
+/* Styles for the form content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding: 20px;
+}
+
+/* Styles for the input fields */
+.name,
+.email,
+.subject,
+.textarea {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.name input,
+.email input,
+.subject input,
+.textarea textarea {
+    width: 100%;
+    color: #FFF;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    background: none;
+}
+
+.name input:focus,
+.email input:focus,
+.subject input:focus,
+.textarea textarea:focus {
+    border-color:var(--primary-color);
+}
+
+/* Styles for the form content */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 20px;
+
+}
+
+/* Styles for the input fields */
+.name,
+.email,
+.subject,
+.textarea {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.name input,
+.email input,
+.subject input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.textarea textarea {
+    width: 100%;
+    height: 150px; 
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.name input:focus,
+.email input:focus,
+.subject input:focus,
+.textarea textarea:focus {
+    border-color: black;
+}
+
+/* Styles for the button area */
+.button-area {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.button-area button {
+    padding: 12px 30px;
+    background-color: black;
+    color: #fff;
+    font-weight: bold;
+    border-color: #000000;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px solid var(--primary-color);
+    transition: 0.3s;
+    
+}
+
+.button-area button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    
+}
+
+.info {
+    display: flex;
+    align-items: center;
+
+}
+
+.social-icons {
+    font-size: 35px;
+    padding-left:40px;
+}
+
+.social-icons a {
+    color: white;
+    transition: color 0.3s;
+    margin: 0 30px;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+/* footer section styling */
+footer {
+    background: black;
+    padding: 15px 23px;
+    color: var(--text-color);
+    text-align: center;
+}
