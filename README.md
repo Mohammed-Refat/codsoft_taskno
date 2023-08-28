@@ -23,7 +23,19 @@ Throughout my internship, I undertook a diverse array of projects, each presenti
 - **Goals**: The project focuses on showcasing our car lineup with detailed specifications and engaging visuals. It employs interactive elements, such as 360-degree views and virtual test drives, to provide an immersive online showroom experience. Furthermore, the website enables easy navigation, features engaging content like blogs and testimonials, and facilitates direct communication with customers. The responsive design ensures consistent user experiences across devices, reinforcing brand identity, optimizing for search engines, and ensuring optimal performance.
 - **Technologies Used**: HTML, CSS, and JavaScript
 - **My Role**: I took on the responsibility of front-end development for the Wheels website. My role entailed translating intricate designs into responsive user interfaces through the use of HTML, CSS, and JavaScript. By integrating interactive elements such as 360-degree views, I optimized performance to ensure seamless user experiences. Collaborating seamlessly with design and back-end teams, I played a pivotal role in crafting a visually captivating and engaging digital showroom.
+  
+**Project 2: Portfolio**
+- **Description**: The portfolio showcases a curated selection of my professional journey, featuring my skills, achievements, and projects. It serves as a comprehensive overview of my experience and expertise.
+- **Goals**: The project aims to provide a visually appealing and informative platform that highlights my skills and accomplishments. It showcases various projects, certifications, and achievements in an organized and accessible manner. The portfolio incorporates responsive design principles, ensuring a seamless experience for visitors across different devices.
+- **Technologies Used**: HTML, CSS, JavaScript
+- **My Role**: As the developer of my personal portfolio, I meticulously crafted each section to present a clear and concise overview of my skills and accomplishments. By utilizing HTML, CSS, and JavaScript, I designed an intuitive user interface that allows visitors to navigate through my professional journey effortlessly. The portfolio serves as a testament to my capabilities and showcases my dedication to excellence.
 
+**Project 3: Calculator**
+- **Description**: The Calculator project is a functional application that offers users a simple and efficient tool for performing arithmetic calculations. It provides a user-friendly interface with basic mathematical operations.
+- **Goals**: The project aims to create a straightforward calculator tool that assists users in performing various arithmetic calculations. The calculator offers essential functions such as addition, subtraction, multiplication, and division. The user interface is designed to be intuitive and easy to use, catering to users who need quick calculations without the need for complex features.
+- **Technologies Used**: HTML, CSS, JavaScript
+- **My Role**: I played a pivotal role in developing the Calculator application. By utilizing HTML, CSS, and JavaScript, I created an interface that allows users to input numbers and select operations effortlessly. The application's functionality was meticulously implemented to ensure accurate and reliable calculations. My contribution to the project ensured the delivery of a practical and user-friendly tool for everyday mathematical needs.
+  
 ## Key Takeaways
 
 My internship at Codsoft has been profoundly transformative, enriching me with invaluable skills and insights in the realm of web development. Key takeaways from my journey include:
